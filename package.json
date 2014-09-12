@@ -1,0 +1,28 @@
+{
+  "name": "hubot-prove-everywhere",
+  "version": "0.0.0",
+  "description": "hubot script for ProveEverywhere",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/prove-everywhere/hubot-script.git"
+  },
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "coq",
+    "prove-everywhere"
+  ],
+  "author": "amutake",
+  "license": "BSD3",
+  "bugs": {
+    "url": "https://github.com/prove-everywhere/hubot-script/issues"
+  },
+  "homepage": "https://github.com/prove-everywhere/hubot-script",
+  "dependencies": {
+    "coffee-script": ""
+  }
+}
