@@ -14,15 +14,21 @@
 
 module.exports = (robot) ->
 
-  peUrl = process.env.HUBOT_PROVE_EVERYWHERE_URL
+  url = process.env.HUBOT_PROVE_EVERYWHERE_URL
 
-  if !peUrl
+  if !url
     return robot.logger.error """
       Please specify HUBOT_PROVE_EVERYWHERE_URL
     """
 
   robot.respond /proof new$/i, (msg) ->
-    msg.reply "not implemented yet"
+    robot.http(url + "/start")
+      .post() (err, res, body) ->
+        if err
+          msg.send "Error: #{err}"
+        else
+          info = JSON.parse(body)
+          msg.send "ID: #{info.id}\n\n#{info.output}"
 
   robot.respond /proof put (\d+) (\.+)$/i, (msg) ->
     msg.reply "not implemented yet"
