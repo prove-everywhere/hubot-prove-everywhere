@@ -1,5 +1,5 @@
 # Description:
-#   makes it possible to prove by coq in a chat room
+#   makes it possible to prove by coq in chat room
 #
 # Configuration:
 #   HUBOT_PROVE_EVERYWHERE_URL (required)
@@ -47,4 +47,10 @@ module.exports = (robot) ->
             msg.send "ID: #{id}\n\n#{output.last_output.output}"
 
   robot.respond /proof terminate (\d+)$/i, (msg) ->
-    msg.reply "not implemented yet"
+    id = msg.match[1]
+    robot.http(url + "/terminate/" + id)
+      .delete() (err, res, body) ->
+        if err
+          msg.send "Error: #{err}"
+        else
+          msg.send "ID: #{id} have been terminated"
