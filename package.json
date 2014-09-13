@@ -1,6 +1,6 @@
 {
   "name": "hubot-prove-everywhere",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "hubot script for ProveEverywhere",
   "main": "index.coffee",
   "scripts": {
