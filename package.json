@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/prove-everywhere/hubot-script.git"
+    "url": "git://github.com/prove-everywhere/hubot-prove-everywhere.git"
   },
   "keywords": [
     "hubot",
@@ -19,9 +19,9 @@
   "author": "amutake",
   "license": "BSD3",
   "bugs": {
-    "url": "https://github.com/prove-everywhere/hubot-script/issues"
+    "url": "https://github.com/prove-everywhere/hubot-prove-everywhere/issues"
   },
-  "homepage": "https://github.com/prove-everywhere/hubot-script",
+  "homepage": "https://github.com/prove-everywhere/hubot-prove-everywhere",
   "dependencies": {
     "coffee-script": ""
   }
